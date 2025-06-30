@@ -1,10 +1,19 @@
-<h1>
-    <a href="{% url "learning_logs:index" %}">Learning Log</a>
- -
-    <a href="{% url "learning_logs:topics" %}">Topics</a>
+<p>
+<a href="{% url "learning_logs:index" %}">Learning Log</a> -
+<a href="{% url "learning_logs:topics" %}">Topics</a> -
+{% if user.is_authenticated %}
+Hello, {{ user.username }}.
+<form action="{% url 'users:logout' %}" method="post">
+    {% csrf_token %}
+    <button name="submit">Logout</button>
+</form>
+{% else %}
+<a href="{% url 'users:register' %}">Register</a> -
+<a href="{% url 'users:login' %}">Log in</a>
+{% endif %}
+</p>
     
-</h1>
-<br><br><br>
+<br>
 
 {% block content %}
 {% endblock content %}
