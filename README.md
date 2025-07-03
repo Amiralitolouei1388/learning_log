@@ -1,6 +1,6 @@
 # learning_log
-# a simple weblog for anyrhing out learned
-# writed by Amirali_Tolouei & Mahdi_Alizadeh
+# a simple weblog for anyrhing our learned
+# written by Amirali_Tolouei & Mahdi_Alizadeh
 # styled by bootstrap4
-# runned by django
+# runned by django (back_end)
 # programming language is python
